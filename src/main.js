@@ -13,12 +13,15 @@ const render = (container, template, place) => {
   container.insertAdjacentHTML(place, template);
 };
 
-for (let i = 0; i < ROUTE_POINT; i++) {
-  render(?, createRoutePointTemplate(), `beforeend`);
-}
-/*
-const siteMainElement = document.querySelector(`.main`);
-const siteHeaderElement = siteMainElement.querySelector(`.main__control`);
+const siteMenuElement = document.querySelector(`.nav`);
+const siteHeaderElement = siteMainElement.querySelector(`.header`);
 
 render(siteHeaderElement, createSiteMenuTemplate(), `beforeend`); 
-*/
+
+
+
+render(routePointElement, createRoutePointTemplate(), `beforeend`);
+
+for (let i = 0; i < ROUTE_POINT; i++) {
+  render(routePointElement, createRoutePointTemplate(), `beforeend`);
+}
